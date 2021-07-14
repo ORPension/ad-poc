@@ -13,4 +13,6 @@ azure:
     user-group:
       allowed-group-names: group1, group2, Users
 
+welcomeMessage: Default Message!
+
 debug: true

@@ -1,6 +1,15 @@
 #server:
 #  port: 8081
 
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          azure:
+            client-id: 03912d0b-bb99-473d-8a76-e6a228da997f
+            client-secret: 2bz9hNYDDwI1_~xl.M4b5S4kxQ.04X_112
+            
 azure:
   activedirectory:
     # Specifies your Active Directory ID:

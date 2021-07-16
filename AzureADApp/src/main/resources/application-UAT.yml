@@ -1,1 +1,29 @@
-welcomeMessage: UAT Message!
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          azure:
+            client-id: 03912d0b-bb99-473d-8a76-e6a228da997f
+            client-secret: 2bz9hNYDDwI1_~xl.M4b5S4kxQ.04X_112
+            redirect-uri: https://azapp-ad-app-uat.azurewebsites.us/login/oauth2/code/azure
+
+azure:
+  activedirectory:
+    # Specifies your Active Directory ID:
+    tenant-id: c7e0de68-75b5-4003-879d-5c1ed5892f13
+    # Specifies your App Registration's Application ID:
+    client-id: 03912d0b-bb99-473d-8a76-e6a228da997f
+    # Specifies your App Registration's secret key:
+    client-secret: 2bz9hNYDDwI1_~xl.M4b5S4kxQ.04X_112
+    redirect-uri-template: https://azapp-ad-app-uat.azurewebsites.us/login/oauth2/code/azure
+    # Specifies the list of Active Directory groups to use for authorization:
+    user-group:
+      allowed-group-names: group1, group2, Users
+    authorization-clients:
+      graph:
+        scopes:
+            - https://graph.microsoft.com/User.Read
+            - https://graph.microsoft.com/Directory.AccessAsUser.All
+
+welcomeMessage: UAT Message

@@ -10,31 +10,37 @@ import org.springframework.security.access.prepost.PreAuthorize;
 public class HelloController {
 	@Value("${welcomeMessage}")
 	private String welcomeMessage;
+	@Value("${environmentName}")
+	private String environmentName;
 	
     @RequestMapping("/")
     @ResponseBody
     public String open() {
-        return "Open to Everyone!!!  Welcome Message:  " + this.welcomeMessage;
+        return "Open to Everyone!!!  " + getWelcomeMessage();
     }
 
     @RequestMapping("/users")
 	@ResponseBody
 	@PreAuthorize("hasRole('ROLE_Users')")
     public String helloWorld() {
-        return "Hello Users!  Welcome Message:  " + this.welcomeMessage;
+        return "Hello Users!  " + getWelcomeMessage();
     }
 
     @RequestMapping("/group1")
     @ResponseBody
     @PreAuthorize("hasRole('ROLE_group1')")
     public String groupOne() {
-        return "Hello Group 1 Users!  Welcome Message:  " + this.welcomeMessage;
+        return "Hello Group 1 Users!  " + getWelcomeMessage();
     }
 
     @RequestMapping("/group2")
     @ResponseBody
     @PreAuthorize("hasRole('ROLE_group2')")
     public String groupTwo() {
-        return "Hello Group 2 Users!  Welcome Message:  " + this.welcomeMessage;
+        return "Hello Group 2 Users!  " + getWelcomeMessage();
+    }
+    
+    private String getWelcomeMessage() {
+        return "Welcome Message:  " + this.welcomeMessage + ", Environment Name:  " + this.environmentName;
     }
 }

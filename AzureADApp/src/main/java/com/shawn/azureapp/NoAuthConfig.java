@@ -5,7 +5,8 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-@Profile({"LOCAL", "DEV"})
+@Profile({"LOCAL", "DEV", "UAT"})
+//@Profile({"LOCAL")
 @Configuration
 public class NoAuthConfig extends WebSecurityConfigurerAdapter {
 

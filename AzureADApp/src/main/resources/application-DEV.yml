@@ -1,1 +1,13 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          azure:
+            redirect-uri: https://azapp-ad-app-dev.azurewebsites.us/login/oauth2/code/azure
+
+azure:
+  activedirectory:
+    redirect-uri-template: https://azapp-ad-app-dev.azurewebsites.us/login/oauth2/code/azure
+
 welcomeMessage: DEV Message!

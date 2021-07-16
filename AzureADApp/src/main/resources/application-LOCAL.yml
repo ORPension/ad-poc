@@ -1,0 +1,11 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          azure:
+            redirect-uri: http://localhost:8080/login/oauth2/code/azure
+
+azure:
+  activedirectory:
+    redirect-uri-template: http://localhost:8080/login/oauth2/code/azure

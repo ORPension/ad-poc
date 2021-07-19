@@ -1,9 +1,6 @@
 name: AzureADPOC CI - UAT
 
 on:
-  push:
-    branches:
-      - dev
   workflow_dispatch:
 
 jobs:

@@ -1,9 +1,6 @@
 name: AzureADPOC CI - PROD
 
 on:
-  push:
-    branches:
-      - dev
   workflow_dispatch:
 
 jobs:

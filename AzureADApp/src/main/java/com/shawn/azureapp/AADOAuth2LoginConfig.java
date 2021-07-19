@@ -13,7 +13,7 @@ import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 
 //@EnableWebSecurity
 //@EnableGlobalMethodSecurity(prePostEnabled = true)
-@Profile({"PROD"})
+@Profile({"DEV", "PROD"})
 //@Profile({"DEV", "UAT", "PROD"})
 @Configuration
 public class AADOAuth2LoginConfig extends WebSecurityConfigurerAdapter {

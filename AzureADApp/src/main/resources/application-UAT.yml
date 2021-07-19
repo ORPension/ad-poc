@@ -4,18 +4,18 @@ spring:
       client:
         registration:
           azure:
-            client-id: 03912d0b-bb99-473d-8a76-e6a228da997f
-            client-secret: 2bz9hNYDDwI1_~xl.M4b5S4kxQ.04X_112
+            client-id: 0378839f-7d01-4915-b67c-51b6cf913f14
+            client-secret: 2Lxtj3~t30tiM2OvQbK3~CO0cV.p-fQ_L-
             redirect-uri: https://azapp-ad-app-uat.azurewebsites.us/login/oauth2/code/azure
 
 azure:
   activedirectory:
     # Specifies your Active Directory ID:
-    tenant-id: c7e0de68-75b5-4003-879d-5c1ed5892f13
+    tenant-id: 0107f7b6-fa03-4b7a-a7bf-9b09c6b0c87a
     # Specifies your App Registration's Application ID:
-    client-id: 03912d0b-bb99-473d-8a76-e6a228da997f
+    client-id: 0378839f-7d01-4915-b67c-51b6cf913f14
     # Specifies your App Registration's secret key:
-    client-secret: 2bz9hNYDDwI1_~xl.M4b5S4kxQ.04X_112
+    client-secret: 2Lxtj3~t30tiM2OvQbK3~CO0cV.p-fQ_L-
     redirect-uri-template: https://azapp-ad-app-uat.azurewebsites.us/login/oauth2/code/azure
     # Specifies the list of Active Directory groups to use for authorization:
     user-group:
